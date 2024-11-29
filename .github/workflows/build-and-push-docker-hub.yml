@@ -2,14 +2,14 @@ name: Build, Push, Ssh, Pull, Down, Up
 
 on: [push]
 
-
 jobs:
   build-and-push:
     name: Build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout files
-        uses: actions/checkout@v2
+        uses: actions/checkout@v
+        2
       - uses: actions/setup-node@v3
         with:
           node-version: 18
@@ -30,7 +30,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: lamdb/ci-cd:staging2
+          tags: buiquocbao1408/ci-cd:staging2
 
 
   pull-and-up:
